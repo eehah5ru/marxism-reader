@@ -6,7 +6,7 @@ TEX = xelatex -shell-escape -interaction=nonstopmode -file-line-error
 
 all: $(MASTER_FILE).pdf $(MASTER_FILE).aux
 
-view:
+view: $(MASTER_FILE).pdf
 	open -a /Applications/Preview.app $(MASTER_FILE).pdf
 
 # $(MASTER_FILE).aux: $(MASTER_FILE).tex
