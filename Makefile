@@ -25,7 +25,7 @@ $(MASTER_FILE).toc $(MASTER_FILE).aux: $(MASTER_FILE).tex VERSION
 
 
 VERSION:
-	git rev-parse HEAD
+	git describe --tags > VERSION
 
 # $(MASTER_FILE).bbl  $(MASTER_FILE).blg: $(MASTER_FILE).aux
 #			bibtex $(MASTER_FILE)
@@ -44,3 +44,4 @@ clean:
 	rm -f *.toc *.lof *.lot
 	rm -f *.thm *.out
 	rm -f *.ind *.idx *.ilg
+	rm VERSION
